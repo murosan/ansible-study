@@ -1,0 +1,30 @@
+---
+- name: add admin group
+  group:
+    name: "{{ admin_group_name }}"
+    gid: "{{ admin_group_id }}"
+  become: yes
+
+- name: add admin user
+  user:
+    name: "{{ item.name }}"
+    uid: "{{ item.uid }}"
+    group: "{{ admin_group_name }}"
+    groups: wheel
+  with_items: "{{ admin_users }}"
+  become: yes
+
+- name: register public key
+  authorized_key:
+    user: "{{ item.name }}"
+    key: "{{ item.pubkey }}"
+  with_items: "{{ admin_users }}"
+  become: yes
+
+- name: allow admin group to do commands with sudo
+  template:
+    src: admin.j2
+    dest: /etc/sudoers.d/admin
+    mode: 0440
+  become: yes
+  when: ansible_os_family == 'RedHat'

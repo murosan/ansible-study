@@ -1,0 +1,8 @@
+admin_group_name: admins
+admin_group_id: 1500
+admin_users:
+  - {
+    name: murosan,
+    uid: 1600,
+    pubkey: "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCswZLcMwIZxvgITqeQJuQm7MuAibMHnYExrzia62MnjyQY/QGfFCpgfbIsD6mQy25PzujVhvQlzwTdo65DI5ppcfUBJeG/Z4GmhRuB7amR+UbptJIx0DN3p0EqNtI5Vuu5BAtZfGKfT0FQ5HOixfHNI110ljWiZgaNZ/1P5o75UIKtl6FQFZAgPijBEO2kHSNovqPkOmQH9EK8zuWHjI0DDyRS32QZtqU5xMi0v6eE6MPoYcTtRf3SDD2XO8suYjTlowQ/hTZPRVyOETdndieyox6bDmIVgeerPxSJgRdd5qQ1/z88+BR4m0J5qJVcj/0q0qhmaDud9cYWQKsRevtZ"
+  }

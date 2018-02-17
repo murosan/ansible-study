@@ -1,0 +1,10 @@
+---
+- name: add users
+  hosts: all
+  user: root
+  become: no
+  become_user: root
+  roles:
+    - add-user
+  vars_files:
+    - ./inventory/vars.yml
